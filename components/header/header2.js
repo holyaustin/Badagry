@@ -5,7 +5,7 @@ import { Fragment, useState } from 'react';
 import Link from 'next/link'
 import Sticky from 'react-stickynode';
 import Image from '../image';
-import TopBar from '../topbar';
+// import TopBar from '../topbar';
 import LockIcon from '../icons/lock';
 import HamburgerMenu from '../hamburger';
 import Navbar2 from './navbar2';
@@ -42,7 +42,7 @@ export default function Header() {
 
   return (
     <Fragment>
-      <TopBar />
+     {/** <TopBar />  */}
       <Sticky
         enabled={true}
         top={0}
@@ -80,6 +80,7 @@ export default function Header() {
           <Link href="/select">
           <a>Select-Tour </a>
           </Link>
+          
           <Link href="https://web3chat-holyaustin.vercel.app/">
           <a> Chat</a>
           </Link>

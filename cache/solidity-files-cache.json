@@ -958,6 +958,46 @@
       "artifacts": [
         "IERC20Permit"
       ]
+    },
+    "/home/augustine/Dapps/2023/Aug2023/badagry/contracts/Minter.sol": {
+      "lastModificationDate": 1693000008594,
+      "contentHash": "cecd1954f837fe71da3ae268f16f57ff",
+      "sourceName": "contracts/Minter.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "Minter"
+      ]
     }
   }
 }

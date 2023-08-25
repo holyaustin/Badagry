@@ -100,7 +100,7 @@ if (window.ethereum.networkVersion !== chainId) {
           method: "eth_requestAccounts",
         });
         setAddress(accounts[0]);
-        navigate.push('/select')
+        navigate.push('/select');
       } catch (error) {
         console.error(error);
       }
