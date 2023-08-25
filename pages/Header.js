@@ -16,7 +16,7 @@ const Header = () => {
                 you digital collectibles today.
               </h1>
               <p className="a2e a1Q a1o a3c a1t md:a3d">
-                The first digital tourism project on Blockchain. We shall be taking you through series of African heritage as you journey with us in this adventure and the best part is that you shall be collecting your digital collecetibles as you tour. Enjoy tourism the African way.
+              First African web3 Meseum project on Blockchain. We shall be taking you through series of African heritage as you journey with us in this adventure and the best part is that you shall be collecting your digital collecetibles as you tour. Enjoy tourism the African way.
               </p>
               <div className="flex flex-wrap items-center">
 

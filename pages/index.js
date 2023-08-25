@@ -25,7 +25,7 @@ export default function Home() {
           <img src="/images/BadagryLogo2.png" alt="logo" height="50px" />
           <Link href="/">
             <a className="font-coiny text-2xl md:text-2xl font-bold text-white">
-            🔥Badagry
+           
             {/*
               <span className="bg-gradient-to-br from-brand-blue to-brand-purple pr-2 bg-clip-text text-transparent ">
                 🐒Badagry

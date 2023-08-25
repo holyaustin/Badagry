@@ -1,18 +1,40 @@
-# Badagry - web3 Medium for preserving the African heritage through story telling
+# Badagry - First African web3 Meseum for preserving the African heritage through story telling
 
 ## Introduction
 
-![home](./react-10.jpg)
+![home](./front.png)
 
-## Problem Statement
+##Deliverables : Submitted projects should have:
 
-## Solution
+### 1. Project / Team name 
+Badagry 
+
+### 2. Short description about the project
+Badagry - First African web3 Meseum for preserving the African heritage through story telling, As we intend to onbaord more web3 users, it is pertinent that the tourism section of Africa be considered. This project seek to bring the blockchain technology into the African tourism (meseum) Space. Users from all around the world can see some of the African heritage without leaving the shores of their country. They also buy collecetibles as proof of their visit.
+
+
+### 3. Discord and Telegram username for the team’s person of contact
+holyaustin#3735
+
+### 4. Repository with project’s code 
+https://github.com/holyaustin/Badagry
+
+### 5. Video demo (90 seconds) and/or Presentation (10 slides max)
+https://youtu.be/9YQon2ihLLE
+
+
+### 6. The contract address(es) or website URLs of your deployed application, either on a testnet of your choice or mainnet of a platform of choice.
+https://goerli.basescan.org/address/0xd547726541fb37db19fdb263f4855ba969034071
+
+
 
 ## Tech Stack Used
 
-Client: React, TailwindCSS, web3.js
+Client: Next.js, TailwindCSS, web3.js
 
-Server: Alchemy, NextJS, Hardhat
+web3:  Hardhat, ethers.js
+
+BlockChain: Base Goerli Testnet
 
 ## To run the dapp Locally
 
@@ -31,3 +53,5 @@ While deploying your contract with hardhat you need to use mainnet as network-na
 
 
 https://goerli.basescan.org/address/0xd547726541fb37db19fdb263f4855ba969034071
+
+https://youtu.be/9YQon2ihLLE

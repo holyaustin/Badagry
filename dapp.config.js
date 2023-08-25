@@ -2,9 +2,9 @@ const FORTMATIC_KEY = process.env.NEXT_PUBLIC_FORTMATIC_KEY
 const RPC_URL = process.env.NEXT_PUBLIC_ALCHEMY_RPC_URL
 
 const config = {
-  title: 'BoredApe Dapp',
-  description: 'A showcase dapp which is built for you to create your own',
-  contractAddress: '0x923130181b7F075cBebFc9743D6e923646FD9148',
+  title: 'Badagry',
+  description: 'First African web3 Meseum for preserving the African heritage through story telling',
+  contractAddress: '0xD547726541FB37dB19fDB263f4855bA969034071',
   maxMintAmount: 10,
   presaleMaxMintAmount: 3,
   price: 0.01
@@ -12,7 +12,7 @@ const config = {
 
 const onboardOptions = {
   dappId: process.env.NEXT_PUBLIC_DAPP_ID,
-  networkId: 4, // Rinkeby
+  networkId: 4, 
   darkMode: true,
   walletSelect: {
     wallets: [
@@ -22,7 +22,7 @@ const onboardOptions = {
         walletName: 'walletLink',
         preferred: true,
         rpcUrl: RPC_URL,
-        appName: 'BoredApe Dapp'
+        appName: 'Badagry Dapp'
       },
       {
         walletName: 'fortmatic',
@@ -40,7 +40,7 @@ const onboardOptions = {
       {
         walletName: 'lattice',
         rpcUrl: RPC_URL,
-        appName: 'BoredApe Dapp'
+        appName: 'Badagry Dapp'
       },
       {
         walletName: 'keepkey',
