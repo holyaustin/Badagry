@@ -22,7 +22,7 @@ const Header = () => {
 
 
                 <a
-                  href="create-item.html"
+                  href="select"
                   className="a1Y a10 a5 a1Z a1f a1y a1z aP a1s aW aX aZ a1w hover:a1B hover:a1C"
                 >
                  <ConnectWallet />

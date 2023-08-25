@@ -7,14 +7,13 @@ const Footer = () => {
       <div className="container mx-auto relative px-4 z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-8">
           <div className="footer-widget xl:flex xl:flex-col xl:justify-center xl:col-span-2">
+          
             <a
-              className="font-coiny mb-8 text-xl md:text-3xl font-bold"
-              href="/#"
+              className="font-coiny mb-2 text-xl md:text-3xl font-bold"
+              href="/"
             >
-              <span className="bg-gradient-to-br from-brand-blue to-brand-purple pr-2 bg-clip-text text-transparent ">
-               Badagry
-              </span>
-              Badagry
+
+              <img src="/images/BadagryLogo2.png" alt="logo" height="50px" />
             </a>
             <div className="social-share flex items-center">
               <a
