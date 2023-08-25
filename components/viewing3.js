@@ -12,6 +12,9 @@ export default function ViewFile() {
   const router = useRouter();
   const [nfts, setNfts] = useState([]);
   const [loadingState, setLoadingState] = useState("not-loaded");
+  const image = "/slave/shippingslaves.jpg"
+  const image2 = "/slave/8.jpg"
+  const image3 = "/slave/4.jpg"
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
     loadBounties();
@@ -27,14 +30,17 @@ export default function ViewFile() {
     return props;
   };
 
-  async function Live() {
-    router.push("/dashboardLive");
+  async function Mint1() {
+    router.push("");
   }
-  async function Claim() {
-    router.push("/claim");
+  async function Mint2() {
+    router.push("");
   }
-  const rpcUrl = "https://matic-mumbai.chainstacklabs.com";
-   // const rpcUrl = "localhost";
+
+  async function Next() {
+    router.push("/page4");
+  }
+  const rpcUrl = "https://goerli.base.org";
 
    const { query: id } = router; 
    const props =  id ;
@@ -104,53 +110,50 @@ export default function ViewFile() {
 	    <div className="col-start-1 col-end-3 row-span-2 text-white bg-indigo-500 text-4xl flex items-center justify-center border-4 border-red-500">
 
     <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-4 pt-4">
-        {nfts.map((nft, i) => (
-    <div key={i} className="shadow rounded-xl overflow-hidden">
+
+    <div className="shadow rounded-xl overflow-hidden">
       <img
         title="Car Pics"
         frameBorder="0"
         scrolling="no"
         height="450px"
         width="100%"
-        src={`${nft.image}#toolbar=0`}
+        src={`${image}#toolbar=0`}
         className="object-fill h-400 w-full"
       />
       <div className="p-4">
-        <p style={{ height: "20px" }} className="text-3xl font-semibold">{nft.name}</p>
+        <p style={{ height: "20px" }} className="text-3xl font-semibold"></p>
       </div>
       <div className="p-4">
-        <p style={{ height: "20px" }} className="text-3xl font-semibold">Bounty No: {nft.tokenId}</p>
+        <p style={{ height: "20px" }} className="text-3xl font-semibold"></p>
       </div>
     
       <div className="p-4">
-        <p style={{ height: "50px" }} className="text-2xl font-semibold">Bounty Owner: {nft.address}</p>
+        <p style={{ height: "50px" }} className="text-2xl font-semibold"></p>
       </div>
 
     </div>
-  ))
-}
+
 </div>
     
   </div>
 
 	<div className="text-white bg-indigo-500 text-4xl flex items-center justify-center border-4 border-red-500">
   <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-4 pt-4">
-{nfts.map((nft, i) => (
-    <div key={i} className="rounded-xl overflow-hidden">
+    <div className="rounded-xl overflow-hidden">
       <img
         title="Car Pics"
         frameBorder="0"
         scrolling="no"
         height="450px"
         width="100%"
-        src={`${nft.image2}#toolbar=0`}
+        src={`${image2}#toolbar=0`}
         className="object-fill h-400 w-full"
       />
 
 
     </div>
-  ))
-}
+
 </div>
     
     
@@ -175,21 +178,19 @@ export default function ViewFile() {
 	<div className="text-white bg-indigo-500  text-4xl flex items-center justify-center border-4 border-red-500">
     
   <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-4 pt-4">
-{nfts.map((nft, i) => (
-    <div key={i} className="shadow rounded-xl overflow-hidden">
+
+    <div  className="shadow rounded-xl overflow-hidden">
       <img
         title="Car Pics"
         frameBorder="0"
         scrolling="no"
         height="450px"
         width="100%"
-        src={`${nft.image3}#toolbar=0`}
+        src={`${image3}#toolbar=0`}
         className="object-fill h-400 w-full"
       />
 
     </div>
-  ))
-}
 </div>
 
 </div>
@@ -203,7 +204,7 @@ export default function ViewFile() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="chat"
-                    >Chat with other tourists 
+                    >Chat
                     </a>
                   </button>
                 </div>
@@ -213,7 +214,9 @@ export default function ViewFile() {
                 <div className="p-4 bg-indigo-500">
                   <button type="button" className="w-full bg-blue-800 text-white font-bold py-2 px-12 border-b-4 border-blue-200 hover:border-blue-500 rounded-full" onClick={() => Live()}>Mint NFT 2</button>
                 </div>
-            
+                <div className="p-4 bg-indigo-500">
+                  <button type="button" className="w-full bg-blue-800 text-white font-bold py-2 px-12 border-b-4 border-blue-200 hover:border-blue-500 rounded-full" onClick={() => Next()}>Next page</button>
+                </div>
     </div>
 
    
