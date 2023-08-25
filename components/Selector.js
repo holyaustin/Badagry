@@ -34,7 +34,7 @@ export default function ViewFiles() {
   }
   return (
     <Box as="section"  sx={styles.section}>
-      <div className="bg-blue-100 text-4xl text-center text-black font-bold pt-5 pb-4">
+      <div className="bg-blue-100 text-4xl text-center text-black font-bold pt-5 pb-4 bg-[#101233]">
         <h1> Select a Museum</h1>
       </div>
     <div className="flex justify-center bg-blue-100 mb-12">
@@ -71,7 +71,7 @@ export default function ViewFiles() {
 
 const styles = {
   section: {
-    backgroundColor: 'primary',
+    backgroundColor: '#101233',
     pt: [17, null, null, 20, null],
     pb: [null, null, null, 12, null],
   },

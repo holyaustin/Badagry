@@ -56,7 +56,7 @@ export default function Header() {
           className={state.isSticky ? 'is-sticky' : ''}
         >
           <Container sx={styles.container}>
-          <Image src="/images/mominter_logo.png" loading="lazy" sx={styles.logo} alt="logo" />
+          <Image src="/images/BadagryLogo2.png" loading="lazy" sx={styles.logo} alt="logo" />
 {/**
           <Navbar2
               isSticky={state.isSticky}
@@ -73,20 +73,15 @@ export default function Header() {
           <Link href="/">
           <a>Home</a>
           </Link>
-          <Link href="/explore">
-          <a>Video-On-Demand</a>
+          <Link href="/marketplace">
+          <a>Marketplace</a>
           </Link>
-          <Link href="/publish">
-          <a>Publish-Moment</a>
+
+          <Link href="/select">
+          <a>Select-Tour </a>
           </Link>
-          <Link href="/encrypt">
-          <a> Encrypt-Upload</a>
-          </Link>
-          <Link href="/Videoconference">
-          <a>Video-Conference </a>
-          </Link>
-          <Link href="/videoplayer">
-          <a> Video-Player</a>
+          <Link href="https://web3chat-holyaustin.vercel.app/">
+          <a> Chat</a>
           </Link>
 
 
@@ -109,8 +104,8 @@ export default function Header() {
                 variant="text"
                 sx={{
                   ...styles.joinCommunity,
-                  backgroundColor: state.isSticky ? 'primary' : 'white',
-                  color: state.isSticky ? 'white' : 'primary',
+                  backgroundColor: state.isSticky ? '#101233' : 'white',
+                  color: state.isSticky ? 'white' : '#101233',
                 }} onlick={logout}
               >
                 <a>Logout </a>
@@ -210,7 +205,7 @@ const styles = {
   },
   logo: {
     mr: [null, null, null, null, 3, null, 5],
-    height: ['25px', null, null, '75px'],
+    height: ['25px', null, null, '95px'],
   },
   buttonGroup: {
     alignItems: 'center',

@@ -179,7 +179,7 @@ export default function ViewFiles() {
 
 const styles = {
   section: {
-    backgroundColor: 'primary',
+    backgroundColor: '#101233',
     pt: [17, null, null, 20, null],
     pb: [6, null, null, 12, 16],
   },

@@ -102,7 +102,7 @@ export default function ViewFile() {
   return (
     <Box as="section"  sx={styles.section} className="bg-blue-100 ">
     <>
-    <div className=" text-4xl text-center text-black font-bold ">
+    <div className=" text-4xl text-center text-white font-bold ">
         <h1>The Middle Passage</h1>
       </div>
       <div className="grid grid-cols-4 grid-rows-3 col-gap-2 row-gap-5 bg-gray-300 mx-20 my-5">
@@ -232,7 +232,7 @@ export default function ViewFile() {
 
 const styles = {
   section: {
-    backgroundColor: 'primary',
+    backgroundColor: '#101233',
     pt: [17, null, null, 20, null],
     pb: [6, null, null, 12, 16],
   },

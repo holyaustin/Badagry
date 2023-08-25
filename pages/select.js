@@ -4,6 +4,7 @@ import theme from '../theme';
 import SEO from '../components/seo';
 import Layout from '../components/layout2';
 import ViewFiles from '../components/Selector';
+import Footer from './Footer'
 
 export default function Select() {
   return (
@@ -16,6 +17,7 @@ export default function Select() {
         <ViewFiles/>
 
       </Layout>
+      <Footer />
     </ThemeProvider>
   );
 }
