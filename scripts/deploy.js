@@ -1,9 +1,15 @@
+// const hre = require("hardhat");
+const fs = require('fs');
+
 const main = async() => {
-  const contractFactory = await ethers.getContractFactory('TwitterContract');
+  const contractFactory = await ethers.getContractFactory('BadagryNFT');
   const contract = await contractFactory.deploy();
   await contract.deployed();
-
   console.log("Contract deployed to: ", contract.address);
+
+  fs.writeFileSync('./config.js', `
+  export const badagryNFTAddress = "${contract.address}"
+`);
 }
 
 const runMain = async() => {

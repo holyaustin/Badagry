@@ -73,7 +73,7 @@ const Footer = () => {
               <li className="mb-4 mr-4">
                 <a
                   className="font-body text-blueGray-600 transition duration-500 hover:text-indigo-500 underline-hover"
-                  href="/dark/"
+                  href="/"
                 >
                   Home
                 </a>
@@ -81,15 +81,15 @@ const Footer = () => {
               <li className="mb-4 mr-4">
                 <a
                   className="font-body text-blueGray-600 transition duration-500 hover:text-indigo-500 underline-hover"
-                  href="/dark/explore"
+                  href="/marketplace"
                 >
-                  Explore
+                  MarketPlace
                 </a>
               </li>
               <li className="mb-4 mr-4">
                 <a
                   className="font-body text-blueGray-600 transition duration-500 hover:text-indigo-500 underline-hover"
-                  href="/dark/wallet"
+                  href="/"
                 >
                   Wallet
                 </a>
@@ -98,7 +98,7 @@ const Footer = () => {
               <li className="mb-4 mr-4">
                 <a
                   className="font-body text-blueGray-600 transition duration-500 hover:text-indigo-500 underline-hover"
-                  href="/dark/term-condition"
+                  href="/"
                 >
                   Terms{' '}
                 </a>
@@ -113,7 +113,7 @@ const Footer = () => {
               <li className="mb-4 mr-4">
                 <a
                   className="font-body text-blueGray-600 transition duration-500 hover:text-indigo-500 underline-hover"
-                  href="/dark/explore"
+                  href="/marketplace"
                 >
                   Explore Artwork
                 </a>
@@ -121,7 +121,7 @@ const Footer = () => {
               <li className="mb-4 mr-4">
                 <a
                   className="font-body text-blueGray-600 transition duration-500 hover:text-indigo-500 underline-hover"
-                  href="/dark/item-single"
+                  href="#"
                 >
                   Artwork History
                 </a>
@@ -129,7 +129,7 @@ const Footer = () => {
               <li className="mb-4 mr-4">
                 <a
                   className="font-body text-blueGray-600 transition duration-500 hover:text-indigo-500 underline-hover"
-                  href="/dark/leaderboard"
+                  href="#"
                 >
                   Explore Trends
                 </a>
@@ -152,7 +152,7 @@ const Footer = () => {
               <li className="mb-4 mr-4">
                 <a
                   className="font-body text-blueGray-600 transition duration-500 hover:text-indigo-500 underline-hover"
-                  href="/mint"
+                  href="/publish"
                 >
                  Mint Page
                 </a>
@@ -160,7 +160,7 @@ const Footer = () => {
               <li className="mb-4 mr-4">
                 <a
                   className="font-body text-blueGray-600 transition duration-500 hover:text-indigo-500 underline-hover"
-                  href="/dark/item-single2"
+                  href="#"
                 >
                   Howto Mint
                 </a>
@@ -168,7 +168,7 @@ const Footer = () => {
               <li className="mb-4 mr-4">
                 <a
                   className="font-body text-blueGray-600 transition duration-500 hover:text-indigo-500 underline-hover"
-                  href="/dark/activity"
+                  href="#"
                 >
                   Activity
                 </a>
@@ -176,7 +176,7 @@ const Footer = () => {
               <li className="mb-4 mr-4">
                 <a
                   className="font-body text-blueGray-600 transition duration-500 hover:text-indigo-500 underline-hover"
-                  href="/dark/contact"
+                  href="#"
                 >
                   Contact
                 </a>

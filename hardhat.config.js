@@ -20,13 +20,11 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 module.exports = {
   solidity: "0.8.17",
   networks: {
-    optimism_Testnet: {
-      url: process.env.ALCHEMY_RPC,
-      accounts: [process.env.ACCOUNT_PRIVATE_KEY],
-    },
-    base_Testnet: {
+    base_testnet: {
       url: process.env.BASE_RPC,
       accounts: [process.env.ACCOUNT_PRIVATE_KEY],
+      gasPrice: 35000000000,
+      saveDeployments: true,
     },
   }
 };

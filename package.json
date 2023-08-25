@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@alch/alchemy-web3": "^1.2.4",
+    "@emotion/react": "^11.11.1",
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-waffle": "^2.0.2",
     "@openzeppelin/contracts": "^4.5.0",
+    "@uauth/js": "^2.8.0",
     "bnc-onboard": "^1.38.2",
     "chai": "^4.3.6",
     "dotenv": "^16.0.0",
@@ -22,8 +24,17 @@
     "keccak256": "^1.0.6",
     "merkletreejs": "^0.2.30",
     "next": "12.1.4",
+    "nft.storage": "^7.1.1",
+    "polished": "^4.2.2",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-blockies": "^1.4.1",
+    "react-dom": "18.0.0",
+    "react-icons": "^4.10.1",
+    "react-router-dom": "^6.15.0",
+    "react-scroll": "^1.8.9",
+    "reactjs-popup": "^2.0.5",
+    "theme-ui": "^0.16.1",
+    "web3modal": "^1.9.12"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-etherscan": "^3.0.3",

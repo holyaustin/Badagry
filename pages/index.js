@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Footer from './Footer'
 import Header from './Header'
 import How from './How'
+import ConnectWallet from "../components/ConnectWallet";
 
 import { config } from '../dapp.config'
 import Roadmap from './Roadmap'
@@ -18,15 +19,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header id='#top' className="min-w-full text-gray-800 py-14 px-4 md:px-0 bg">
+      <header id='#top' className="min-w-full text-gray-800 px-2 md:px-0 bg">
         <div className="flex items-center container mx-auto justify-between px-28 h-full">
-          {/* Logo */}
-          <Link href="#">
+          {/* Logo  */}
+          <img src="/images/BadagryLogo2.png" alt="logo" height="50px" />
+          <Link href="/">
             <a className="font-coiny text-2xl md:text-2xl font-bold text-white">
+            🔥Badagry
+            {/*
               <span className="bg-gradient-to-br from-brand-blue to-brand-purple pr-2 bg-clip-text text-transparent ">
                 🐒Badagry
               </span>
-              🔥Badagry
+             */}
             </a>
           </Link>
 
@@ -85,7 +89,15 @@ export default function Home() {
         <Header />
         <h2 className="font-display text-jacarta-700 mb-8 text-center text-3xl dark:text-white">
           <span className="mr-1 inline-block h-6 w-6 bg-contain bg-center text-xl"></span>
-          <span className="animate-pulse">🔥</span>Mint Now
+          <span className="animate-pulse"></span>
+          <a
+                  href="/marketplace"
+                  className="a2c a1Y a10 a5 a1Z a1f a1y a1B a1C aP a1s aW aX aZ a1w hover:a36"
+                >
+               🔥  Explore MarketPlace
+                </a>
+          
+          
         </h2>
       </header>
       <How />

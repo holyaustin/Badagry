@@ -1,0 +1,18 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
+import { Fragment } from 'react';
+
+export default function Layout({ children }) {
+  return (
+    <Fragment>
+      <main
+        sx={{
+          variant: 'layout.main',
+        }}
+      >
+        {children}
+      </main>
+    </Fragment>
+  );
+}

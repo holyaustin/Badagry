@@ -29,6 +29,5 @@ While deploying your contract with hardhat you need to use mainnet as network-na
 
   npx hardhat run scripts/deploy.js --network base_testnet
 
-# This command will verify your smart contract on mainnet etherscan
 
-  npx hardhat run scripts/verifyContract.js --network mainnet
+https://goerli.basescan.org/address/0xd547726541fb37db19fdb263f4855ba969034071

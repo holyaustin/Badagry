@@ -14,7 +14,7 @@ contract BoredApe is
     ERC721, 
     Ownable, 
     ReentrancyGuard, 
-    PaymentSplitter \readContract
+    PaymentSplitter
 {
     using Strings for uint256;
     using Counters for Counters.Counter;

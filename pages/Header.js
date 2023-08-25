@@ -1,3 +1,5 @@
+import ConnectWallet from "../components/ConnectWallet";
+
 const Header = () => {
   return (
     <section className="af a2o a2p a38 a39 a3a a1E[150px] a1F">
@@ -5,8 +7,8 @@ const Header = () => {
       <div className="ae">
         <div className="a1R a3 a1S a5">
           <div className="a4 ak lg:a1T/2">
-            <div className="a2w aL[570px] lg:a2x">
-              <h1 className="font-bold mb-6 text-center text-5xl dark:text-white md:text-left lg:text-6xl xl:text-7xl pb-4">
+
+              <h1 className="font-bold mb-6 text-center text-5xl dark:text-white md:text-left lg:text-6xl xl:text-7xl pb-2">
                Tour and {' '}
                 <span className="text-orange-200 font-thin font-coiny underline decoration-wavy">
                   mint
@@ -17,20 +19,16 @@ const Header = () => {
                 The first digital tourism project on Blockchain. We shall be taking you through series of African heritage as you journey with us in this adventure and the best part is that you shall be collecting your digital collecetibles as you tour. Enjoy tourism the African way.
               </p>
               <div className="flex flex-wrap items-center">
-                <a
-                  href="/mint"
-                  className="a2c a1Y a10 a5 a1Z a1f a1y a1B a1C aP a1s aW aX aZ a1w hover:a36"
-                >
-                 Start your Tour
-                </a>
+
+
                 <a
                   href="create-item.html"
                   className="a1Y a10 a5 a1Z a1f a1y a1z aP a1s aW aX aZ a1w hover:a1B hover:a1C"
                 >
-                  Need Help
+                 <ConnectWallet />
                 </a>
               </div>
-            </div>
+
           </div>
           <div className="a4 ak lg:a1T/2 ape-bg">
             <div className="a1L animate-bounce ">
