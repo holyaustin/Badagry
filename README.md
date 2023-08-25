@@ -20,7 +20,9 @@ holyaustin#3735
 https://github.com/holyaustin/Badagry
 
 ### 5. Video demo (90 seconds) and/or Presentation (10 slides max)
-https://youtu.be/9YQon2ihLLE
+https://youtu.be/Vtdscnftpog (90 secs)
+
+https://youtu.be/9YQon2ihLLE (Extended Version)
 
 
 ### 6. The contract address(es) or website URLs of your deployed application, either on a testnet of your choice or mainnet of a platform of choice.
