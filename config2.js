@@ -1,2 +1,2 @@
 
-  export const MinterAddress = "0x33f88fE3F2410ad58230142af151D9B5840d9b01"
+  export const MinterAddress = "0xa199AB87E3787C67f5286d78f527B1426f022eeD"

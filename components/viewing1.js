@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { jsx, Box } from 'theme-ui';
 import { ethers } from "ethers";
+import Web3Modal from 'web3modal'
 import axios from "axios";
 import { useRouter } from 'next/router'
 
-import fileNFT from "../artifacts/contracts/Badagry.sol/BadagryNFT.json";
-import { badagryNFTAddress } from "../config";
+import fileNFT from "../artifacts/contracts/Minter.sol/Minter.json";
+import { MinterAddress } from "../config2";
 
 const containerStyle = {
   position: "relative",
@@ -34,7 +35,7 @@ export default function ViewFile() {
   const image3 = "/slave/6.jpg"
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
-    loadBounties();
+    // loadBounties();
   }, []);
   const getIPFSGatewayURL = (ipfsURL) => {
     const urlArray = ipfsURL.split("/");
@@ -47,13 +48,6 @@ export default function ViewFile() {
     return props;
   };
 
-  async function Mint1() {
-    router.push("");
-  }
-  async function Mint2() {
-    router.push("");
-  }
-
   async function Next() {
     router.push("/page2");
   }
@@ -64,47 +58,43 @@ export default function ViewFile() {
    const props =  id ;
    console.log('Props result is without ', props.id);
 
+   async function Mint2() {
+    console.log("Minting NFT1");
+    const url2 = "https://bafkreidjp2mriqgeaheap2m7o2ypvwj4fb3r3isjtvkdppyiud7z3ek27i.ipfs.dweb.link/";
+    const web3Modal = new Web3Modal()
+    const connection = await web3Modal.connect()
+    const provider = new ethers.providers.Web3Provider(connection)
+    const signer = provider.getSigner()
 
-  async function loadBounties() {
-    /* create a generic provider and query for unsold market items 
-    console.log("loading bounty for item", props.id);
-    const carid = props.id;
-    const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
-    const contract = new ethers.Contract(fileShareAddress, fileNFT.abi, provider);
-    // const data = await contract.fetchOneNFT(carid);
-    console.log("book data fetched from contract");
-    // console.log(provider.getCode(address));
+    /* create the NFT */
+    //const price = ethers.utils.parseUnits(formInput.price, 'ether')
+    let contract = new ethers.Contract(MinterAddress, fileNFT.abi, signer)
+    let listingPrice = await contract.getListingPrice()
+    listingPrice = listingPrice.toString()
+    console.log("Listing price is ", listingPrice)
+    let transaction = await contract.createFile(url2, { value: listingPrice })
+    await transaction.wait()
+    alert("NFT Successfully minted");
+  }
 
-    const items = await Promise.all(data.map(async (i) => {
-      const tokenUri = await contract.tokenURI(i.tokenId);
-      console.log("token Uri is ", tokenUri);
-      const httpUri = getIPFSGatewayURL(tokenUri);
-      console.log("Http Uri is ", httpUri);
-      const meta = await axios.get(httpUri);
+  async function Mint1() {
+    console.log("Minting NFT1");
+     const url = "https://dweb.link/ipfs/bafkreifm6dg5eh7hwui3fac2jrewiewcu4e7vm5opwuhwznr3p7n4gsdum";
 
-      
-      const item = {
-        tokenId: i.tokenId.toNumber(),
-        image: getIPFSGatewayURL(meta.data.image),
-        name: meta.data.name,
-        description: meta.data.description,
-        vin: meta.data.properties.vin,
-        address: meta.data.properties.address,
-        make: meta.data.properties.make,
-        model: meta.data.properties.model,
-        price: meta.data.properties.price,
-        year: meta.data.properties.year,
-        colour: meta.data.properties.colour,
-        image2: getIPFSGatewayURL(meta.data.properties.image2),
-        image3: getIPFSGatewayURL(meta.data.properties.image3),
+    const web3Modal = new Web3Modal()
+    const connection = await web3Modal.connect()
+    const provider = new ethers.providers.Web3Provider(connection)
+    const signer = provider.getSigner()
 
-      };
-      console.log("item returned is ", item);
-      return item;
-    }));
-    setNfts(items);
-    setLoadingState("loaded");
-    */
+    /* create the NFT */
+    let contract = new ethers.Contract(MinterAddress, fileNFT.abi, signer)
+    let listingPrice = await contract.getListingPrice()
+    listingPrice = listingPrice.toString()
+    console.log("Listing price is ", listingPrice)
+    let transaction = await contract.createFile(url2, { value: listingPrice })
+    await transaction.wait()
+    alert("NFT Successfully minted");
+
   }
 
 
@@ -149,7 +139,7 @@ export default function ViewFile() {
         //style={responsiveIframe}
         src={`${sharelink}#toolbar=0`}
         //className="py-3 object-fit h-full w-full"
-        objectFit="cover"
+        // objectFit="cover"
         allowFullScreen="allowFullScreen"
         width="720px"
         height= "100%"

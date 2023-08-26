@@ -19,12 +19,12 @@ import { rgba } from 'polished';
 import { useRouter } from 'next/router'
 
 const truncateAddress = (address) => `${address.slice(0, 8)}...${address.slice(-4)}`;
-
+const chainId = 84531 // Base Goerli Testnet
 const uauth = new UAuth({
   clientID: "58971f20-5524-49c9-b021-72c37275da1a",
   redirectUri:
     process.env.NODE_ENV === "production"
-      ? "https://mominter.vercel.app/"
+      ? "https://badagry.vercel.app/"
       : "http://localhost:3000",
 });
 
@@ -61,51 +61,23 @@ const ConnectWallet = () => {
       }
   }
 
-  const connectWallet = async () => {
-
-    const chainId = 84531 // Base Goerli Testnet
-
-if (window.ethereum.networkVersion !== chainId) {
-      try {
-        await window.ethereum.request({
-          method: 'wallet_switchEthereumChain',
-          params: [{ chainId: web3.utils.toHex(chainId) }]
-        });
-      } catch (err) {
-          // This error code indicates that the chain has not been added to MetaMask
-        if (err.code === 4902) {
-          await window.ethereum.request({
-            method: 'wallet_addEthereumChain',
-            params: [
-              {
-                chainName: 'Base Mainnet',
-                chainId: web3.utils.toHex(chainId),
-                nativeCurrency: { name: 'ETH', decimals: 18, symbol: 'ETH' },
-                rpcUrls: ['https://goerli.base.org']
-              }
-            ]
+   const connectWallet = async () => {
+      if (!address) {
+        const { ethereum } = window;
+        try {
+          if (!ethereum) {
+            sethaveMetamask(false);
+          }
+          const accounts = await ethereum.request({
+            method: "eth_requestAccounts",
           });
+          setAddress(accounts[0]);
+          navigate.push('/select')
+        } catch (error) {
+          console.error(error);
         }
       }
-    }
-   
-    if (!address) {
-      const { ethereum } = window;
-      try {
-        if (!ethereum) {
-          sethaveMetamask(false);
-        }
-
-        const accounts = await ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        setAddress(accounts[0]);
-        navigate.push('/select');
-      } catch (error) {
-        console.error(error);
-      }
-    }
-  };
+    };
 
   const connectUnstoppable = async () => {
     try {

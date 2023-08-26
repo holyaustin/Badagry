@@ -21,12 +21,11 @@ const Header = () => {
               <div className="flex flex-wrap items-center">
 
 
-                <a
-                  href="select"
+                <div
                   className="a1Y a10 a5 a1Z a1f a1y a1z aP a1s aW aX aZ a1w hover:a1B hover:a1C"
                 >
                  <ConnectWallet />
-                </a>
+                </div>
               </div>
 
           </div>

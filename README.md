@@ -95,20 +95,32 @@ https://goerli.basescan.org/address/0x33f88fe3f2410ad58230142af151d9b5840d9b01
 
 https://youtu.be/9YQon2ihLLE
 
-https://dweb.link/ipfs/bafkreiens5gxjvktoyamjtyrzdx3zynp3pqysx4aamjaq7xmoilitwd6v4
+https://dweb.link/ipfs/bafkreiens5gxjvktoyamjtyrzdx3zynp3pqysx4aamjaq7xmoilitwd6v4   no-return
 
-https://dweb.link/ipfs/bafkreiaji5ih7pwq4nx5dmzhjwfw23gy74sffw6av77ax5y76n7v3dydcy
+https://dweb.link/ipfs/bafkreiaji5ih7pwq4nx5dmzhjwfw23gy74sffw6av77ax5y76n7v3dydcy    Mirror
 
-https://dweb.link/ipfs/bafkreifm6dg5eh7hwui3fac2jrewiewcu4e7vm5opwuhwznr3p7n4gsdum
+https://dweb.link/ipfs/bafkreifm6dg5eh7hwui3fac2jrewiewcu4e7vm5opwuhwznr3p7n4gsdum    Iron collar2
 
-https://dweb.link/ipfs/bafkreid3scqqf2tye6aspnxwbht6yk47llmzrfiwrmvxmahqg42ttpxyye
+https://dweb.link/ipfs/bafkreid3scqqf2tye6aspnxwbht6yk47llmzrfiwrmvxmahqg42ttpxyye    hand-neck-chain
 
-https://dweb.link/ipfs/bafkreidjp2mriqgeaheap2m7o2ypvwj4fb3r3isjtvkdppyiud7z3ek27i
+https://dweb.link/ipfs/bafkreidjp2mriqgeaheap2m7o2ypvwj4fb3r3isjtvkdppyiud7z3ek27i    Chain Girl
 
-https://dweb.link/ipfs/bafkreigums2o5e7zowjuoincidxvmz77lk7dv2euovxivcgt6lw5pa4pxq
+https://dweb.link/ipfs/bafkreigums2o5e7zowjuoincidxvmz77lk7dv2euovxivcgt6lw5pa4pxq    chained hands
 
-https://dweb.link/ipfs/bafkreibnfbxjehepfjcsp2ukqve3a22grzi6jl2n3ovtmg56vlo5c3jh44
+https://dweb.link/ipfs/bafkreibnfbxjehepfjcsp2ukqve3a22grzi6jl2n3ovtmg56vlo5c3jh44    xxxxxx
 
-https://dweb.link/ipfs/bafkreiftew6irumtjaxrwj6ywj2mpbjizrr4kdb5p4yjf3e7i2ulaa4boq
+https://dweb.link/ipfs/bafkreiftew6irumtjaxrwj6ywj2mpbjizrr4kdb5p4yjf3e7i2ulaa4boq    4 slaves
 
-https://dweb.link/ipfs/bafkreiazjwjv4xne5ddgw3ffespwnosqrm6ugsgy3fcbiz5e2xch3ygc2e
+https://dweb.link/ipfs/bafkreiazjwjv4xne5ddgw3ffespwnosqrm6ugsgy3fcbiz5e2xch3ygc2e    Bitcoin Chain
+
+
+
+        event ReceivedEth(uint256 amount);
+
+    receive() external payable  { 
+        emit ReceivedEth(msg.value);
+    }
+
+    fallback() external payable {
+        emit ReceivedEth(msg.value);
+    }

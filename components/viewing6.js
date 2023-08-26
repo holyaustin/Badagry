@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { jsx, Box } from 'theme-ui';
 import { ethers } from "ethers";
+import Web3Modal from 'web3modal'
 import axios from "axios";
 import { useRouter } from 'next/router'
 
-import fileNFT from "../artifacts/contracts/Badagry.sol/BadagryNFT.json";
-import { badagryNFTAddress } from "../config";
+import fileNFT from "../artifacts/contracts/Minter.sol/Minter.json";
+import { MinterAddress } from "../config2";
 
 export default function ViewFile() {
   console.log('Entered viewing component');
@@ -17,7 +18,7 @@ export default function ViewFile() {
   const image3 = "/slave/2.jpg"
   useEffect(() => {
     // eslint-disable-next-line no-use-before-define
-    loadBounties();
+    // loadBounties();
   }, []);
   const getIPFSGatewayURL = (ipfsURL) => {
     const urlArray = ipfsURL.split("/");
@@ -30,13 +31,6 @@ export default function ViewFile() {
     return props;
   };
 
-  async function Mint1() {
-    router.push("");
-  }
-  async function Mint2() {
-    router.push("");
-  }
-
   async function Next() {
     router.push("/page7");
   }
@@ -47,48 +41,44 @@ export default function ViewFile() {
    console.log('Props result is without ', props.id);
 
 
-  async function loadBounties() {
-    /* create a generic provider and query for unsold market items 
-    console.log("loading bounty for item", props.id);
-    const carid = props.id;
-    const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
-    const contract = new ethers.Contract(fileShareAddress, fileNFT.abi, provider);
-    // const data = await contract.fetchOneNFT(carid);
-    console.log("book data fetched from contract");
-    // console.log(provider.getCode(address));
+   async function Mint2() {
+    console.log("Minting NFT1");
+    const url2 = "https://dweb.link/ipfs/bafkreidjp2mriqgeaheap2m7o2ypvwj4fb3r3isjtvkdppyiud7z3ek27i";
+    const web3Modal = new Web3Modal()
+    const connection = await web3Modal.connect()
+    const provider = new ethers.providers.Web3Provider(connection)
+    const signer = provider.getSigner()
 
-    const items = await Promise.all(data.map(async (i) => {
-      const tokenUri = await contract.tokenURI(i.tokenId);
-      console.log("token Uri is ", tokenUri);
-      const httpUri = getIPFSGatewayURL(tokenUri);
-      console.log("Http Uri is ", httpUri);
-      const meta = await axios.get(httpUri);
-
-      
-      const item = {
-        tokenId: i.tokenId.toNumber(),
-        image: getIPFSGatewayURL(meta.data.image),
-        name: meta.data.name,
-        description: meta.data.description,
-        vin: meta.data.properties.vin,
-        address: meta.data.properties.address,
-        make: meta.data.properties.make,
-        model: meta.data.properties.model,
-        price: meta.data.properties.price,
-        year: meta.data.properties.year,
-        colour: meta.data.properties.colour,
-        image2: getIPFSGatewayURL(meta.data.properties.image2),
-        image3: getIPFSGatewayURL(meta.data.properties.image3),
-
-      };
-      console.log("item returned is ", item);
-      return item;
-    }));
-    setNfts(items);
-    setLoadingState("loaded");
-    */
+    /* create the NFT */
+    //const price = ethers.utils.parseUnits(formInput.price, 'ether')
+    let contract = new ethers.Contract(MinterAddress, fileNFT.abi, signer)
+    let listingPrice = await contract.getListingPrice()
+    listingPrice = listingPrice.toString()
+    console.log("Listing price is ", listingPrice)
+    let transaction = await contract.createFile(url2, { value: listingPrice })
+    await transaction.wait()
+    alert("NFT Successfully minted");
   }
 
+  async function Mint1() {
+    console.log("Minting NFT1");
+     const url = "https://dweb.link/ipfs/bafkreigums2o5e7zowjuoincidxvmz77lk7dv2euovxivcgt6lw5pa4pxq ";
+
+    const web3Modal = new Web3Modal()
+    const connection = await web3Modal.connect()
+    const provider = new ethers.providers.Web3Provider(connection)
+    const signer = provider.getSigner()
+
+    /* create the NFT */
+    let contract = new ethers.Contract(MinterAddress, fileNFT.abi, signer)
+    let listingPrice = await contract.getListingPrice()
+    listingPrice = listingPrice.toString()
+    console.log("Listing price is ", listingPrice)
+    let transaction = await contract.createFile(url, { value: listingPrice })
+    await transaction.wait()
+    alert("NFT Successfully minted");
+
+  }
 
   if (loadingState === "loaded" && !nfts.length) {
     return (
@@ -205,10 +195,10 @@ Although the British Parliament outlawed slavery in 1807, a quarter of all Afric
                   </button>
                 </div>
                 <div className="p-4 bg-indigo-500">
-                  <button type="button" className="w-full bg-blue-800 text-white font-bold py-2 px-12 border-b-4 border-blue-200 hover:border-blue-500 rounded-full" onClick={() => Claim()}> Mint NFT 1</button>
+                  <button type="button" className="w-full bg-blue-800 text-white font-bold py-2 px-12 border-b-4 border-blue-200 hover:border-blue-500 rounded-full" onClick={() => Mint1()}> Mint NFT 1</button>
                 </div>
                 <div className="p-4 bg-indigo-500">
-                  <button type="button" className="w-full bg-blue-800 text-white font-bold py-2 px-12 border-b-4 border-blue-200 hover:border-blue-500 rounded-full" onClick={() => Live()}>Mint NFT 2</button>
+                  <button type="button" className="w-full bg-blue-800 text-white font-bold py-2 px-12 border-b-4 border-blue-200 hover:border-blue-500 rounded-full" onClick={() => Mint2()}> Mint NFT 2</button>
                 </div>
                 <div className="p-4 bg-indigo-500">
                   <button type="button" className="w-full bg-blue-800 text-white font-bold py-2 px-12 border-b-4 border-blue-200 hover:border-blue-500 rounded-full" onClick={() => Next()}>Next page</button>

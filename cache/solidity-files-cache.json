@@ -960,8 +960,8 @@
       ]
     },
     "/home/augustine/Dapps/2023/Aug2023/badagry/contracts/Minter.sol": {
-      "lastModificationDate": 1693000008594,
-      "contentHash": "cecd1954f837fe71da3ae268f16f57ff",
+      "lastModificationDate": 1693018867309,
+      "contentHash": "fed2c9458a36ee9ec84c051da00fd094",
       "sourceName": "contracts/Minter.sol",
       "solcConfig": {
         "version": "0.8.17",

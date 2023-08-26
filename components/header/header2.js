@@ -107,7 +107,7 @@ export default function Header() {
                   ...styles.joinCommunity,
                   backgroundColor: state.isSticky ? '#101233' : 'white',
                   color: state.isSticky ? 'white' : '#101233',
-                }} onlick={logout}
+                }} onClick={logout}
               >
                 <a>Logout </a>
               </Button>
