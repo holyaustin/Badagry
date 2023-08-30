@@ -11,6 +11,9 @@ export default function Layout({ children }) {
       <main
         sx={{
           variant: 'layout.main',
+          padding: '20px', // Adjust padding as needed
+          maxWidth: '100%', // Ensure the content doesn't stretch too wide
+          margin: '0 auto', // Center align content
         }}
       >
         {children}

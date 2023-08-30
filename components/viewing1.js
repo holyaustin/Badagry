@@ -200,7 +200,7 @@ Around 12 million Africans were enslaved in the course of the transatlantic slav
      
     </div>
   
-}
+
 
   </div>
 	<div className="text-white bg-indigo-500  text-4xl flex items-center justify-center border-4 border-red-500">

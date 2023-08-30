@@ -1,4 +1,5 @@
 import React from 'react';
+import { jsx, Box } from "theme-ui";
 import { ThemeProvider } from 'theme-ui';
 import theme from '../theme';
 import SEO from '../components/seo';
@@ -8,19 +9,39 @@ import Footer from './Footer'
 // import Watching from '../components/watching';
 import Watching from '../components/viewing1';
 
+
+
+const styles = {
+  section: {
+    // ... (existing styles)
+    pt: [8, null, null, 10], // Adjust top padding for mobile screens
+    pb: [4, null, null, 8], // Adjust bottom padding for mobile screens
+  },
+};
+
 export default function AddFile() {
+
+  const sharelink = "https://www.youtube.com/embed/Zwqy4XRiNBU";
+  
   return (
-    <ThemeProvider theme={theme}>
-      <Layout>
-        <SEO
-          title="Add new file"
-          description="add a new file"
-        />
-        <Watching />
+    <Box as="section" sx={styles.section} className="bg-blue-100">
+      <>
+        {/* ... (other components and JSX) ... */}
 
-      </Layout>
-      <Footer />
-    </ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <Layout>
+            <SEO
+              title="Add new file"
+              description="add a new file"
+            />
+            <Watching />
+          </Layout>
+          <Footer />
+        </ThemeProvider>
 
+        {/* ... (other components and JSX) ... */}
+      </>
+    </Box>
   );
 }
+
